@@ -1,1 +1,79 @@
-hw4.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/validateRegisterForm.js"></script>
+    <title>Assignment 4</title>
+</head>
+<body>
+    
+<div>
+    <h1>Note:</h1>
+    <ul>
+        <li>This is an individual assignment.</li>
+        <li>Submission via Blackboard.</li>
+        <li>Please submit a zip folder containing all necessary files (html, css, img, etc..).</li>
+        <li>Due on Friday Nov 26th by midnight.</li>
+    </ul>
+</div>
+
+<hr>
+
+<form class="form" id="registerForm" onsubmit="validateRegisterForm()">
+
+    <fieldset >
+
+        <legend>Personal Information</legend>
+        
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" title="Initial capital, then lowercase and no spaces" required>
+
+        <label for="lastName:">Last Name:</label>
+        <input id="lastName" type="text" title="Initial capital, then lowercase and no spaces" required>
+
+        <label for="gender">Gender: </label>
+        
+        <label for="gender">Male</label>	
+        <input name="gender" type="radio" value="male" required>
+        
+        <label for="gender">Female</label>	
+        <input name="gender" type="radio" value="female" required>
+    
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <label for="email">Email</label>
+        <input id="email" type="text" title="Anything except [@/!'\"]. then @ , then your domain." required>	
+
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" type="text" title="Starts by 05 then, 8 digit" required>	
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Details</legend>
+
+        <label for="reason">Reason</label>
+        <select name="reason" id="" required>
+            <option value="saudiAraba">Saudi Araba</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="" cols="30" rows="10"></textarea>	
+    </fieldset>
+
+    <label for="methodReply">How do you like to receive our reply?</label>
+    
+    <label for="wantEmail">From Email?</label>
+    <input name="wantEmail" type="checkbox" value="yes" required>
+
+    <label for="wantPhoneNumber">From Phone call?</label>
+    <input name="wantPhoneNumber" type="checkbox" value="yes" required>
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>
